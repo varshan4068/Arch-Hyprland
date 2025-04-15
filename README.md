@@ -30,20 +30,20 @@
   
   And i included auto-cpufreq tool a very good tool for your system which does save battery life a lot more better than tlp does and if u wanna know more details then refer the repo
   
-      https://github.com/AdnanHodzic/auto-cpufreq.git 
+    https://github.com/AdnanHodzic/auto-cpufreq.git 
 
   
   Some basic Keybindings in my hyprland configuration were,
 
-      Super + a --> Rofi 
-      Super + e --> Thunar file manager
-      Super + d --> Gnome-disk-utility
-      Super + return --> kitty 
-      Super + p --> Retoggling the waybar
-      Super + w --> Rofi-wifi-menu 
-      Super + v --> vscode
-      Super + c --> Used for Closing Apps
-      print screen key --> screenshot with hyprshot 
+    Super + a --> Rofi 
+    Super + e --> Thunar file manager
+    Super + d --> Gnome-disk-utility
+    Super + return --> kitty 
+    Super + p --> Retoggling the waybar
+    Super + w --> Rofi-wifi-menu 
+    Super + v --> vscode
+    Super + c --> Used for Closing Apps
+    print screen key --> screenshot with hyprshot 
 
 
   To Know About All keybindings just refer the hyprland.conf at ~/.config/hypr 
@@ -54,7 +54,7 @@
   
   The sddm themes were taken from the repo  
       
-      https://github.com/Keyitdev/sddm-astronaut-theme.git
+    https://github.com/Keyitdev/sddm-astronaut-theme.git
 
   
   That's it these were my personally used hyprland configuration , feel free to try out my dotfiles if any issues or bugs in my dotfiles report it and i would solve   the issues quickly... 
