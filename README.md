@@ -2,7 +2,7 @@
 
 
                                                                                                                                                                  
-  At First clone my repository using : 
+  To clone my repository use : 
 
     git clone https://github.com/varshan4068/Arch-Hyprland.git
 
