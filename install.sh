@@ -197,9 +197,11 @@ y)
 
 	cd ~/Arch-Hyprland/
 	cp starship.toml  nvim/ kitty/ hypr/ dunst/ backgrounds/ rofi/ waybar/  ~/.config/
-	cp .bashrc  rofi-wifi-menu/ .icons/ ~
+	cp .bashrc  rofi-wifi-menu/ icons/ ~
 	sudo cp rofi-power-menu /usr/bin/
 	cd ~
+	mkdir .icons/
+	cp icons/WinSur-white-cursors/ ~/.icons/
 	;;
 n)
 	clear
