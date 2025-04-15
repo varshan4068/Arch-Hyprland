@@ -4,7 +4,7 @@
                                                                                                                                                                  
   At First clone my repository using : 
 
-  git clone 
+  git clone https://github.com/varshan4068/Arch-Hyprland.git
 
   Just run the install.sh in your hyprland window manager 
   ./install.sh 
