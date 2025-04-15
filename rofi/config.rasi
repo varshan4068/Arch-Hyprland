@@ -1,0 +1,102 @@
+* {
+    font: "cantarell bold 13";
+}
+
+configuration {
+    modi: "drun,filebrowser";
+    show-icons: true;
+    display-drun: "Apps:";
+}
+
+
+
+listview {
+    columns: 2;
+    lines: 8;
+    fixed-height: true;
+    fixed-columns: true;
+    cycle: true;
+    scrollbar: false;
+    border: 2 px solid;
+		border-radius: 2px;
+		border-color: #f38ba8;
+}
+
+window {
+    transparency: "true";
+    width:880px;
+    border-radius: 2px;
+		border: 2px solid;
+		border-color: #f38ba8;
+    background-color: #000000CC;
+    padding: 6px;
+}
+
+inputbar {
+    border: 2px ;
+    border-radius:  2px;
+	  border-color: #f38ba8;
+		background-color: #3cb371;
+    padding:    8px 22px;
+    spacing:    20px;
+		children: ["prompt", "entry"];
+
+}
+
+prompt {
+    text-color: #000000;
+}
+
+entry {
+    placeholder: "Search Apps";
+    text-color: #000000;
+    placeholder-color: #000000;
+}
+
+mainbox {
+    spacing: 20px;
+    margin: 5;
+    padding: 10px;
+}
+
+element {
+    spacing: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    border-color: #000000;
+    background-color: transparent;
+    text-color: transparent;
+}
+
+element normal.normal {
+	background-color: transparent;
+	text-color: #cdd6f4;
+}
+
+element alternate.normal {
+	text-color: #cdd6f4;
+	background-color: transparent;
+}
+
+element selected.active {
+	background-color: #3cb371;
+	text-color: #000000;
+	border-radius: 2px;
+	border: 2px;
+	border-color: #f38ba8;
+}
+
+element selected.normal {
+	background-color: #3cb371;
+	text-color: #000000;
+	border-radius: 2px;
+	border: 2px;
+	border-color: #f38ba8;
+}
+
+message {
+    background-color: red;
+    border: 0 px solid;
+}
+
+

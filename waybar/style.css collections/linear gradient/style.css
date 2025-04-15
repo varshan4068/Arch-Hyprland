@@ -1,0 +1,123 @@
+* {
+	font: bold 12px  JetBrainsMono Nerd Font;
+}
+
+window#waybar {
+  background: linear-gradient(0.44turn, #3cb371, #3699bc ,#3cb371 ,#3699bc );
+	transition: opacity 0.3s ease-in-out;
+	border: 1px solid #f38ba8;
+}
+#workspaces {
+	border-radius: 100px;
+	margin: 7px 0px 7px 7px; /*top right bottom left*/
+	padding: 0 10px;
+	background-color: #f38ba8;
+	border: 3px solid #000000;
+}
+
+#workspaces button {
+    color: #000000;
+    border-radius: 1px;
+    border: none;
+    padding: 0 5px;
+    margin: 2px 0;
+}
+
+#workspaces button:hover{
+	box-shadow: none;
+	background: #3699bc;
+
+}
+
+#custom-diskspace,
+#backlight,
+#custom-cpufreq,
+#custom-yay,
+#custom-updater,
+#memory,
+#custom-power,
+#backlight,
+#wireplumber,
+#network,
+#clock,
+#tray {
+  border-radius: 12px;
+  margin: 6px 3px;
+  padding: 10px 12px;
+	color: #000000;
+}
+
+#custom-timeshift{
+  border-radius: 12px;
+  margin: 6px 3px;
+  padding: 10px 12px;
+	color: #000000;
+}
+
+#custom-timeshift:hover{
+	color: #3699bc;
+}
+
+#custom-ani-cli {
+	border-radius: 12px;
+  margin: 6px 3px;
+  padding: 10px 12px;
+	color: #000000;
+}
+
+#custom-ani-cli:hover{
+	color: #3699bc;
+}
+
+
+#custom-logo {
+  border-radius: 12px;
+  margin: 6px 3px;
+  padding: 10px 12px;
+	color: #000000;
+
+}
+
+#custom-logo:hover{
+	color: #cdd6f4;
+}
+
+#network {
+  margin: 6px 3px;
+  padding: 10px 12px;
+	color: #000000;
+}
+
+#network:hover{
+	color: #000000;
+}
+
+#battery {
+  margin: 6px 3px;
+  padding: 10px 12px;
+	color: #000000;
+}
+
+#battery.charging {
+	color: #000000;
+}
+
+#battery.warning,
+#battery.urgent {
+  color: #000000;
+}
+
+tooltip {
+  border-radius: 2px;
+  padding: 10px;
+  background-color: #3cb371;
+}
+
+tooltip label {
+  padding: 12px;
+  background-color: #000000;
+}
+
+
+
+
