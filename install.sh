@@ -195,7 +195,7 @@ read -p "Do u wanna install Dotfiles and some other files? (y/n): " dot
 case "$dot" in 
 y)
 
-	cd ~/.dotfiles/
+	cd ~/Arch-Hyprland/
 	cp starship.toml  nvim/ kitty/ hypr/ dunst/ backgrounds/ rofi/ waybar/  ~/.config/
 	cp .bashrc  rofi-wifi-menu/ .icons/   Top-5-Bootloader-Themes/ ~
 	sudo cp rofi-power-menu /usr/bin/
@@ -263,16 +263,15 @@ sudo ufw default allow outgoing
 
 boot(){
 	cat << "EOF"
+                                  
 
-
-
- ████████╗██╗  ██╗███████╗███╗   ███╗███████╗
- ╚══██╔══╝██║  ██║██╔════╝████╗ ████║██╔════╝
-    ██║   ███████║█████╗  ██╔████╔██║█████╗  
-    ██║   ██╔══██║██╔══╝  ██║╚██╔╝██║██╔══╝  
-    ██║   ██║  ██║███████╗██║ ╚═╝ ██║███████╗
-    ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝╚══════╝
-
+ ██████╗ ██████╗ ██╗   ██╗██████╗     ████████╗██╗  ██╗███████╗███╗   ███╗███████╗
+██╔════╝ ██╔══██╗██║   ██║██╔══██╗    ╚══██╔══╝██║  ██║██╔════╝████╗ ████║██╔════╝
+██║  ███╗██████╔╝██║   ██║██████╔╝       ██║   ███████║█████╗  ██╔████╔██║█████╗  
+██║   ██║██╔══██╗██║   ██║██╔══██╗       ██║   ██╔══██║██╔══╝  ██║╚██╔╝██║██╔══╝  
+╚██████╔╝██║  ██║╚██████╔╝██████╔╝       ██║   ██║  ██║███████╗██║ ╚═╝ ██║███████╗
+ ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═════╝        ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝╚══════╝
+                                                                                  
 
 EOF
 }
@@ -280,7 +279,7 @@ EOF
 clear
 boot
 
-cd ~/.dotfiles/Top-5-Bootloader-Themes/
+cd ~/Arch-Hyprland/Top-5-Bootloader-Themes/
 sudo ./install.sh ## then select the theme u wanted u install 
 cd ~
 
