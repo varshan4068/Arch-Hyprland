@@ -1,0 +1,63 @@
+format="""
+
+$username\
+$directory\
+$git_branch\
+$python\
+$c\
+$java\
+$cmd_duration\
+$time\
+\t 
+  │
+$character\
+"""
+
+[username]
+
+style_user = "#3cb371 bold"
+style_root = "#3cb371 bold"
+format = "  ╭───   [$user]($style) "
+disabled = false
+show_always = true
+
+
+[time]
+disabled = false
+time_format = "%I:%M %p" 
+style = "fg:#f38ba8 bold"
+format = "[$time]($style)"
+
+[character]
+format = "  ╰─➤ "
+error_symbol = '[](bold red)'
+
+[directory]
+read_only = " 󰌾 READ ONLY"
+style = "#fab387 bold"
+
+[directory.substitutions]
+"Downloads" = "󰈙 "
+"Pictures" = " "
+
+[cmd_duration]
+min_time = 4
+disabled = false
+show_milliseconds = false
+style = "#3cb371 bold"
+
+[git_branch]
+symbol = " "
+format = '[ $symbol$branch ]($style)'
+
+[java]
+symbol = " "
+format = '[ $symbol ($version) ]($style)'
+
+[python]
+symbol = " "
+format = '[(\($virtualenv\) )]($style)'
+
+[c]
+symbol = ""
+format = '[ $symbol ($version) ]($style)'
