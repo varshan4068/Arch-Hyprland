@@ -1,0 +1,156 @@
+* {
+  min-height: 2px;
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 13px;
+	background-color: #000000;	
+}
+
+window#waybar {
+  background-color: transparent;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+	border-radius: 15px;
+}
+
+#workspaces button {
+  all: initial;
+  border-bottom: 2px solid #cdd6f4;
+	padding: 6px;
+	margin-right: 2px;
+  color: #cdd6f4;
+	margin-bottom: 6px;
+}
+
+#workspaces button:hover {
+	box-shadow: inherit;
+	text-shadow: inherit;
+	background-color: #3699bc;
+}
+
+
+#backlight,
+#custom-timeshift,
+#custom-cpufreq,
+#custom-yay,
+#custom-updater,
+#memory,
+#custom-power,
+#battery,
+#backlight,
+#wireplumber,
+#network,
+#clock,
+#tray {
+  padding: 6px 12px;
+	margin-bottom: 6px;
+}
+
+#custom-diskspace{
+  color: #cdd6f4;
+  border-bottom: 2px solid #cdd6f4;
+	margin-bottom: 6px;
+}
+
+#backlight{
+  border-bottom: 2px solid #cae00d;
+  color: #cae00d;
+	margin-bottom: 6px;
+}
+
+#custom-ani-cli{
+  padding: 6px 12px;
+  color: #3cb371;
+  border-bottom: 2px solid #3cb371;
+	margin-bottom: 6px;
+}
+
+
+#custom-timeshift{
+  color: #008080;
+  border-bottom: 2px solid #008080;
+	margin-bottom: 6px;
+}
+
+#custom-cpufreq{
+  color: #f88379;
+  border-bottom: 2px solid #f88379;
+	margin-bottom: 6px;
+}
+
+#custom-yay {
+  color: #3699bc;
+  border-bottom: 2px solid #3699bc;
+	margin-bottom: 6px;
+}
+
+#custom-updater {
+  color: #3cb371;
+  border-bottom: 2px solid #3cb371;
+	margin-bottom: 6px;
+}
+
+#custom-logo {
+  padding-right: 10px;
+  padding-left: 0px;
+  margin-left: 8px;
+  margin-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 6px;
+  font-size: 15px;
+  border-radius: 2px;
+  color: #f38ba8;
+  border-bottom: 2px solid #f38ba8;
+}
+
+#memory {
+  color: #fab387;
+  border-bottom: 2px solid #fab387;
+	margin-bottom: 6px;
+}
+
+
+
+#battery {
+  border-bottom: 2px solid #f38ba8;
+	color: #f38ba8
+}
+
+#battery.warning,
+#battery.critical,
+#battery.urgent {
+  border-bottom: 2px solid #ff0000;
+  color: #ff0000;
+}
+
+#battery.charging {
+  border-bottom: 2px solid #a6e3a1;
+  color: #a6e3a1;
+}
+
+#wireplumber {
+  border-bottom: 2px solid #f9e2af;
+	color: #f9e2af;
+}
+
+#network {
+  padding-right: 17px;
+  border-bottom: 2px solid #94e2d5;
+	color: #94e2d5
+}
+
+#clock {
+  font-family: JetBrainsMono Nerd Font;
+  color: #f88379;
+  border-bottom: 2px solid #f88379;
+
+}
+
+#custom-power {
+  border-bottom: 2px solid #f2cdcd;
+	color: #f2cdcd;
+	margin-right: 7px;
+}
+
+
+
+

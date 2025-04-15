@@ -1,0 +1,58 @@
+* {
+  min-height: 2px;
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 13px;
+}
+
+window#waybar {
+  background-color: transparent;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+#workspaces button {
+  all: initial;
+  min-width: 6px;
+  padding: 0px 14px;
+  margin: 6.7px 1px;
+  background-color: #000000;
+	border-radius: 12px;
+  color: #cdd6f4;
+}
+
+
+#workspaces button:hover {
+  color: #cdd6f4;
+  background-color: #3699bc;
+}
+
+#custom-diskspace,
+#custom-ani-cli,
+#backlight,
+#custom-timeshift,
+#custom-cpufreq,
+#custom-yay,
+#custom-updater,
+#memory,
+#custom-power,
+#battery,
+#backlight,
+#wireplumber,
+#network,
+#clock,
+#tray {
+  border-radius: 12px;
+  margin: 6px 3px;
+  padding: 6px 12px;
+	color: #cdd6f4;
+  background-color: #000000;
+}
+
+#custom-logo {
+  border-radius: 12px;
+  margin: 6px 3px;
+  padding: 6px 12px;
+	color: #cdd6f4;
+  background-color: #000000;
+
+}
