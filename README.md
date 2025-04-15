@@ -6,7 +6,8 @@
 
   git clone https://github.com/varshan4068/Arch-Hyprland.git
 
-  Just run the install.sh in your hyprland window manager 
+  Just run the install.sh in your hyprland window manager using
+  
   ./install.sh 
 
   This dotfiles were only tested on arch linux so try it with other distros on your own risk....
