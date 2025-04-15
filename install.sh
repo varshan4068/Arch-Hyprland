@@ -197,7 +197,7 @@ y)
 
 	cd ~/Arch-Hyprland/
 	cp starship.toml  nvim/ kitty/ hypr/ dunst/ backgrounds/ rofi/ waybar/  ~/.config/
-	cp .bashrc  rofi-wifi-menu/ .icons/   Top-5-Bootloader-Themes/ ~
+	cp .bashrc  rofi-wifi-menu/ .icons/ ~
 	sudo cp rofi-power-menu /usr/bin/
 	cd ~
 	;;
@@ -278,10 +278,18 @@ EOF
 
 clear
 boot
+read -p "Do u wanna install grub themes by ChrisTitusTech? (y/n): " chris
 
-cd ~/Arch-Hyprland/Top-5-Bootloader-Themes/
-sudo ./install.sh ## then select the theme u wanted u install 
-cd ~
+case "$chris" in
+	y)
+		git clone https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes.git
+		cd Top-5-Bootloader-Themes
+		sudo ./install.sh ## then select the theme u wanted u install 
+		cd ~
+		;;
+	n)
+		;;
+	esac
 
 sddm(){
 	cat << "EOF"
