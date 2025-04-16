@@ -1,5 +1,6 @@
 
-![](https://img.shields.io/github/last-commit/varshan4068/Arch-Hyprland?&style=for-the-badge&color=FFB1C8&logoColor=D9E0EE&labelColor=292324)
+![GitHub last commit](https://img.shields.io/github/last-commit/varshan4068/Arch-Hyprland?style=for-the-badge&color=f38ba8) 
+
 
 # ✨ Arch-Hyprland  
                                                                                                                                                                  
