@@ -12,6 +12,10 @@
     cd Arch-Hyprland/
     ./install.sh 
 
+ > [!WARNING]
+ > This dotfiles were only tested on arch linux so try it with other distros on your own risk....
+ >
+ > It's recommended to snapshot your system with timeshift before running my installation script so that you can backup your system in case of any errors or may be you don't like my dotfiles....
 
   It's recommended to go through the install.sh script once because in the script i have included the script for installing my needed dependencies,so you can alter the script accordingly for your needs of installing your needed dependencies...
 
@@ -25,12 +29,6 @@
   You can customise the colorscheme of kitty by typing the following command on your kitty terminal
 
      theme
- >
- > [!WARNING]
- > This dotfiles were only tested on arch linux so try it with other distros on your own risk....
- >
- >It's recommended to snapshot your system with timeshift before running my installation script so that you can backup your system in case of any errors or may be you don't like my dotfiles....
-
   
   And i included auto-cpufreq tool a very good tool for your system which does save battery life a lot more better than tlp does and if u wanna know more details then refer the repo
   
