@@ -1,8 +1,7 @@
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/varshan4068/Arch-Hyprland?style=for-the-badge&color=f38ba8) 
 
-
-# ✨ Arch-Hyprland  
+# Arch-Hyprland  
                                                                                                                                                                  
   clone my repository using : 
 
@@ -29,6 +28,8 @@
  >
  > [!WARNING]
  > This dotfiles were only tested on arch linux so try it with other distros on your own risk....
+ >
+ >It's recommended to snapshot your system with timeshift before running my installation script so that you can backup your system in case of any errors or may be you don't like my dotfiles....
 
   
   And i included auto-cpufreq tool a very good tool for your system which does save battery life a lot more better than tlp does and if u wanna know more details then refer the repo
@@ -64,4 +65,3 @@
 
   
   These repo will be updated when changes were made in my personal configurations and in case of any bugs in my code......
-  
