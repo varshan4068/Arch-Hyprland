@@ -22,8 +22,7 @@
  
   After everything is setup using nwg-look select the dracula-gtk theme 
 
-  
-  And bash is configured with starship prompt 
+  >Bash is configured with starship prompt
 
   
   You can customise the colorscheme of kitty by typing the following command on your kitty terminal
