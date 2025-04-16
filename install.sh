@@ -186,8 +186,11 @@ read -p "Do u wanna install Dotfiles and some other files? (y/n): " dot
 case "$dot" in 
 y)
 	cd ~/Arch-Hyprland/
+	echo "--> Entered the Arch-Hyprland Directory"
 	cp -r starship.toml  nvim/ kitty/ hypr/ dunst/ backgrounds/ rofi/ waybar/  ~/.config/
 	cp -r .bashrc  rofi-wifi-menu/ ~
+	echo 
+	echo "--> Copied the Dotfiles successfully"
 	sudo cp -r rofi-power-menu /usr/bin/
 	cd ~
 	;;
