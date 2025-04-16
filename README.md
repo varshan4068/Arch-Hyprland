@@ -1,13 +1,15 @@
-# Arch-Hyprland
 
+![](https://img.shields.io/github/last-commit/varshan4068/Arch-Hyprland?&style=for-the-badge&color=FFB1C8&logoColor=D9E0EE&labelColor=292324)
 
+# ✨ Arch-Hyprland  
                                                                                                                                                                  
-  To clone my repository use : 
+  clone my repository using : 
 
     git clone https://github.com/varshan4068/Arch-Hyprland.git
 
   Just run the install.sh in your hyprland window manager using
-  
+
+    cd Arch-Hyprland/
     ./install.sh 
 
 
@@ -23,9 +25,9 @@
   You can customise the colorscheme of kitty by typing the following command on your kitty terminal
 
      theme
-
- 
-  This dotfiles were only tested on arch linux so try it with other distros on your own risk....
+ >
+ > [!WARNING]
+ > This dotfiles were only tested on arch linux so try it with other distros on your own risk....
 
   
   And i included auto-cpufreq tool a very good tool for your system which does save battery life a lot more better than tlp does and if u wanna know more details then refer the repo
