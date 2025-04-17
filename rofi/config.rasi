@@ -13,30 +13,22 @@ configuration {
 listview {
     columns: 2;
     lines: 8;
-    fixed-height: true;
-    fixed-columns: true;
-    cycle: true;
     scrollbar: false;
-    border: 2 px solid;
-		border-radius: 2px;
-		border-color: #f38ba8;
+		border: 2px solid;
+		border-color: transparent;
+
 }
 
 window {
-    transparency: "true";
     width:880px;
     border-radius: 2px;
 		border: 2px solid;
 		border-color: #f38ba8;
     background-color: #000000CC;
-    padding: 6px;
 }
 
 inputbar {
-    border: 2px ;
-    border-radius:  2px;
-	  border-color: #f38ba8;
-		background-color: #3cb371;
+		background-color: #f38ba8;
     padding:    8px 22px;
     spacing:    20px;
 		children: ["prompt", "entry"];
@@ -60,10 +52,9 @@ mainbox {
 }
 
 element {
-    spacing: 20px;
+    spacing: 15px;
     padding: 10px;
     border-radius: 8px;
-    border-color: #000000;
     background-color: transparent;
     text-color: transparent;
 }
@@ -79,24 +70,25 @@ element alternate.normal {
 }
 
 element selected.active {
-	background-color: #3cb371;
-	text-color: #000000;
+	background-color: transparent;
+	text-color: #f38ba8;
 	border-radius: 2px;
 	border: 2px;
 	border-color: #f38ba8;
 }
 
 element selected.normal {
-	background-color: #3cb371;
-	text-color: #000000;
+	background-color: transparent;
+	text-color: #f38ba8;
 	border-radius: 2px;
 	border: 2px;
 	border-color: #f38ba8;
 }
 
 message {
-    background-color: red;
-    border: 0 px solid;
+    background-color: #f38ba8;
+    border: 2 px solid;
+	border-color: #3cb371;
 }
 
 
