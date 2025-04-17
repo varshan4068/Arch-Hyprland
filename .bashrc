@@ -26,6 +26,8 @@ alias cpu='auto-cpufreq --stats'
 alias bar='waybar &'
 alias hypr='hyprpaper &'
 alias k='killall'
+alias install='sudo pacman -S'
+alias remove='sudo pacman -Rns'
 
 cd() {
 	builtin cd "$@"
@@ -38,7 +40,4 @@ elif [ -f /usr/share/bash_completion ]; then
 		./usr/share/bash_completion
 fi
 
-bind "set show-all-if-ambiguous on"
-bind "set completion-ignore-case on"
-bind "TAB:menu-complete"
 
