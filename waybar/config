@@ -10,7 +10,8 @@
     
     "modules-left": ["custom/logo","hyprland/workspaces",],
     
-    "modules-right": ["tray","custom/ani-cli","custom/cpufreq","custom/yay","custom/updater","memory","custom/diskspace",                               "custom/timeshift", "clock","network","backlight","wireplumber","battery","custom/power",],
+    "modules-right": ["tray","custom/ani-cli","custom/cpufreq","custom/yay","custom/updater","memory","custom/diskspace",                               
+		"custom/timeshift", "clock","network","backlight","wireplumber","battery","custom/power",],
     
     "wlr/taskbar": {
         "format": "{icon}",
@@ -40,7 +41,7 @@
     },
 
 	"persistent-workspaces":{
-            "*": 3,
+            "*": 1,
 	},
     },
 
@@ -187,5 +188,5 @@
 				"tooltip-format": "Diskspace",
 				"on-click": "filelight",
     },
-
+		
 }
