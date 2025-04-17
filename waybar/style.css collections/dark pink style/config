@@ -10,7 +10,8 @@
     
     "modules-left": ["custom/logo","hyprland/workspaces",],
     
-    "modules-right": ["tray","custom/ani-cli","custom/cpufreq","custom/yay","custom/updater","memory","custom/diskspace",                               "custom/timeshift", "clock","network","backlight","wireplumber","battery","custom/power",],
+    "modules-right": ["tray","custom/ani-cli","custom/cpufreq","custom/yay","custom/updater","memory","custom/diskspace",                               
+		"custom/timeshift", "clock","network","backlight","wireplumber","battery","custom/power",],
     
     "wlr/taskbar": {
         "format": "{icon}",
@@ -81,7 +82,7 @@
     "network": {
         "format-icons": ["󰤯 ","󰤟 ","󰤢 ","󰤥 ","󰤨 "],
 				"format-wifi": "{icon}",
-				"tooltip-format-wifi": "{essid}",
+				"tooltip-format-wifi": " {essid}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
         "format-ethernet": "󰀂  {ifname}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
 				"format-disconnected": "󰖪 ",
 				"on-click": "rofi-wifi-menu/rofi-wifi-menu.sh",
@@ -187,5 +188,5 @@
 				"tooltip-format": "Diskspace",
 				"on-click": "filelight",
     },
-
+		
 }
