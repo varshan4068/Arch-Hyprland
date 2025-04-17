@@ -46,7 +46,7 @@
    | Super + w     |  Rofi-wifi-menu           |
    | Super + v     |  vscode                   |
    | Super + c     |  Used for Closing Apps    |
-   | print         |  screenshot with hyprshot |
+   | print screen  |  screenshot with hyprshot |
 
 
   To Know About All keybindings just refer the hyprland.conf at ~/.config/hypr 
