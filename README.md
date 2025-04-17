@@ -36,16 +36,17 @@
 
   
   Some basic Keybindings in my hyprland configuration were,
-
-    Super + a --> Rofi 
-    Super + e --> Thunar file manager
-    Super + d --> Gnome-disk-utility
-    Super + return --> kitty 
-    Super + p --> Retoggling the waybar
-    Super + w --> Rofi-wifi-menu 
-    Super + v --> vscode
-    Super + c --> Used for Closing Apps
-    print screen key --> screenshot with hyprshot 
+   | Keys          |      Applications         |
+   | ------------- | ------------------------- |
+   | Super + a     |  Rofi                     |
+   | Super + e     |  Thunar file manager      |
+   | Super + d     |  Gnome-disk-utility       | 
+   | Super + return|  kitty                    | 
+   | Super + p     |  Retoggling the waybar    |
+   | Super + w     |  Rofi-wifi-menu           |
+   | Super + v     |  vscode                   |
+   | Super + c     |  Used for Closing Apps    |
+   | print         |  screenshot with hyprshot |
 
 
   To Know About All keybindings just refer the hyprland.conf at ~/.config/hypr 
