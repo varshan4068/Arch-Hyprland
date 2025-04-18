@@ -11,6 +11,7 @@
   Just run the install.sh in your hyprland window manager using
 
     cd Arch-Hyprland/
+    chmod +x install.sh
     ./install.sh 
 
  > [!WARNING]
@@ -25,7 +26,7 @@
  
   After everything is setup using nwg-look select the dracula-gtk theme 
 
-  >Bash is configured with starship prompt
+  > Bash is configured with starship prompt
 
   
   You can customise the colorscheme of kitty by typing the following command on your kitty terminal
