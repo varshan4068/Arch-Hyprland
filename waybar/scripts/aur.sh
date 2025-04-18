@@ -22,8 +22,9 @@ read -p " Do u wanna update ur aur packages (y/n): " yay
 case "$yay" in
 
 	y)
+		echo
 		yay -Syu
-		sleep 2
+		sleep 1
 		;;
 	n)
 		exit 0

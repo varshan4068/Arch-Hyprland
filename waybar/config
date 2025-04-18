@@ -66,13 +66,15 @@
 
     "memory": {
         "interval": 5,
-        "format": "  {}%",
-				"tooltip": false,
-        "min-length": 4,
+        "format": "  {used:0.1f} GB",
+				"tooltip": true,
+        "min-length": 2,
 				"on-click": "missioncenter",
+				"tooltip-format": " {used:0.1f}GB/{total:0.1f}GB"
     },
-    "tray": {
-        "spacing": 10
+
+   "tray": {
+        "spacing": 10,
     },
 
     "clock": {
@@ -175,18 +177,18 @@
 
     "backlight":{
         "device": "amdgpu_bl1",
-        "format": "{percent}% {icon}",
+        "format": "{percent}%  {icon}",
 				"tooltip-format": "Brightness",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
 				"on-click": "kitty bash -c 'brightnessctl ; sleep 4 ; exit' && notify-send -t 4000 'Keep Your Brightness Level Between 20 to 30 to Save The Battery Life For Nearly 4 Hours'"
     },
     
     "custom/diskspace":{
-        "format": "{} used",
+        "format": "  {} used",
 				"interval": 200,
 				"exec": "~/.config/waybar/scripts/disk_script.sh",
-				"tooltip-format": "Diskspace",
 				"on-click": "filelight",
+				"tooltip": false,
     },
 		
 }

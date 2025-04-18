@@ -3,7 +3,7 @@
 }
 
 window#waybar {
-  background-color: #000000;
+	background-color: #000000;
 	transition: opacity 0.3s ease-in-out;
 	border: 1px solid #f38ba8;
 	border-radius: 2px;
@@ -112,12 +112,13 @@ window#waybar {
 
 tooltip {
   border-radius: 2px;
-  padding: 10px;
-  background-color: #3cb371;
+  background-color: #cdd6f4;
 }
 
 tooltip label {
-  padding: 12px;
+	color: #f38ba8;
+	border-radius: 2px;
+  padding: 16px;
   background-color: #000000;
 }
 
