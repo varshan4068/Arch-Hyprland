@@ -351,6 +351,8 @@ n)
 	;;
 esac
 
+source ~/Arch-Hyprland/restore.sh
+
 read -p "Do u wanna delete the directory Arch-Hyprland/ that has been cloned to your system? (y/n): " del 
 
 case "$del" in
