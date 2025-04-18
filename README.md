@@ -26,6 +26,7 @@
  
   After everything is setup using nwg-look select the dracula-gtk theme 
 
+ 
   > Bash is configured with starship prompt
 
   
