@@ -22,6 +22,24 @@ set -e
 
 echo
 
+echo
+
+read -p "Do u wanna backup your config files before installing my script? (y/n): " backup
+
+case "$backup" in 
+	y)
+		cd ~
+		mkdir backup/
+		cp -r ~/.config/ ~/backup/
+		;;
+	n)
+		;;
+esac
+
+echo
+
+echo
+
 echo "                                        Installation has been started "
 
 echo
@@ -105,7 +123,7 @@ esac
 
 echo
 
-read -p "Do u wanna install yay aur helper? (y/n): " aur
+read -p "Do u wanna install the yay aur helper? (y/n): " aur
 	
 case "$aur" in
 	y)
@@ -125,13 +143,15 @@ esac
 echo 
 
 
-read -p "Do u wanna install yay dependencies? (y/n): " depen
+read -p "Do u wanna install some aur packages? (y/n): " depen
 
 case "$depen" in
 	y)
-		echo "Installing yay dependencies"
+		echo "Installing aur packages"
 
 		yay -S "${yay[@]}"
+
+		clear
 		;;
 	n)
 		clear
@@ -162,6 +182,7 @@ case "$cpu" in
 		git clone https://github.com/AdnanHodzic/auto-cpufreq.git
 		cd auto-cpufreq &&  sudo ./auto-cpufreq-installer
 		sudo auto-cpufreq --install
+		clear
 		;;
 	n)
 		clear 
@@ -191,12 +212,15 @@ case "$dot" in
 y)
 	cd ~/Arch-Hyprland/
 	echo "--> Entered the Arch-Hyprland Directory"
+	echo
 	cp -r starship.toml  nvim/ kitty/ hypr/ dunst/ backgrounds/ rofi/ waybar/  ~/.config/
 	cp -r .bashrc  rofi-wifi-menu/ ~
 	echo 
 	echo "--> Copied the Dotfiles successfully"
+	echo
 	sudo cp -r rofi-power-menu /usr/bin/
 	cd ~
+	clear
 	;;
 n)
 	clear
@@ -228,6 +252,7 @@ y )
 	git clone "https://github.com/pystardust/ani-cli.git"
 	cp -r ani-cli/ani-cli /usr/local/bin
 	rm -rf ani-cli
+	clear
 	;;
 n )
 	clear
@@ -321,10 +346,30 @@ n)
 	echo
 	echo
 	echo "Everything is Installed perfectly just reboot your system to get perfect results"
-	sleep 1
-	clear
+	echo 
+	echo
 	;;
 esac
+
+read -p "Do u wanna delete the directory Arch-Hyprland/ that has been cloned to your system? (y/n): " del 
+
+case "$del" in
+	y)
+		cd ~
+		sudo rm -r Arch-Hyprland/
+		echo 
+		echo
+		echo "Deleted the Arch-Hyprland/ directory successfully"
+		sleep 1.2
+		echo 
+		clear
+		;;
+	n)
+		clear
+		;;
+esac
+
+
 
 reboot(){
 	cat << "EOF"
@@ -347,7 +392,7 @@ case "$choose" in
 	y )
 		echo "Rebooting ur system now....."
 		systemctl reboot
-		sleep 3
+		sleep 4
 		;;
 	n )
 		clear
@@ -375,6 +420,7 @@ case "$select" in
 	y )
 		echo "Shutdowing ur system now....."
 		systemctl poweroff 
+		sleep 3
 		;;
 	n )
 		clear
