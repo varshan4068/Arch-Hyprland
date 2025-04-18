@@ -211,6 +211,7 @@ read -p "Do u wanna install Dotfiles and some other files? (y/n): " dot
 case "$dot" in 
 y)
 	cd ~/Arch-Hyprland/
+	echo
 	echo "--> Entered the Arch-Hyprland Directory"
 	echo
 	cp -r starship.toml  nvim/ kitty/ hypr/ dunst/ backgrounds/ rofi/ waybar/  ~/.config/
