@@ -4,16 +4,33 @@ set -e
 
 echo 
 
-read -p "Do wanna restore your backups? (y/n): " backups
+
+while true;do
+
+read -p " :: Do wanna restore your backups? (y/n): " backups
 
 case "$backups" in 
 
-	y) 
+	[y]*) 
+		clear
+		echo 
+		echo " :: Restoring your Backup files :: "
 		cd ~
 		cp -r ~/backup/.config/ ~
 		rm -r backup/
 		clear
+		break
 		;;
-	n)
+	[n]*)
+		clear
+		break
 		;;
+	*)
+		echo 
+		echo 
+		echo " :: Please answer yes or no ::"
+		echo 
+		echo 
 esac
+
+done
