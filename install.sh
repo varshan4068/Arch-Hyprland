@@ -3,14 +3,13 @@
 print_logo(){
 	cat << "EOF"
 
-
- __ __  __ __  ____  ____   _       ____  ____   ___        ___     ___   ______  _____  ____  _        ___  _____
-|  |  ||  |  ||    \|    \ | |     /    ||    \ |   \      |   \   /   \ |      ||     ||    || |      /  _]/ ___/
-|  |  ||  |  ||  o  )  D  )| |    |  o  ||  _  ||    \     |    \ |     ||      ||   __| |  | | |     /  [_(   \_ 
-|  _  ||  ~  ||   _/|    / | |___ |     ||  |  ||  D  |    |  D  ||  O  ||_|  |_||  |_   |  | | |___ |    _]\__  |
-|  |  ||___, ||  |  |    \ |     ||  _  ||  |  ||     |    |     ||     |  |  |  |   _]  |  | |     ||   [_ /  \ |
-|  |  ||     ||  |  |  .  \|     ||  |  ||  |  ||     |    |     ||     |  |  |  |  |    |  | |     ||     |\    |
-|__|__||____/ |__|  |__|\_||_____||__|__||__|__||_____|    |_____| \___/   |__|  |__|   |____||_____||_____| \___|
+  __ __  __ __  ____  ____   _       ____  ____   ___        ___     ___   ______  _____  ____  _        ___  _____
+ |  |  ||  |  ||    \|    \ | |     /    ||    \ |   \      |   \   /   \ |      ||     ||    || |      /  _]/ ___/
+ |  |  ||  |  ||  o  )  D  )| |    |  o  ||  _  ||    \     |    \ |     ||      ||   __| |  | | |     /  [_(   \_ 
+ |  _  ||  ~  ||   _/|    / | |___ |     ||  |  ||  D  |    |  D  ||  O  ||_|  |_||  |_   |  | | |___ |    _]\__  |
+ |  |  ||___, ||  |  |    \ |     ||  _  ||  |  ||     |    |     ||     |  |  |  |   _]  |  | |     ||   [_ /  \ |
+ |  |  ||     ||  |  |  .  \|     ||  |  ||  |  ||     |    |     ||     |  |  |  |  |    |  | |     ||     |\    |
+ |__|__||____/ |__|  |__|\_||_____||__|__||__|__||_____|    |_____| \___/   |__|  |__|   |____||_____||_____| \___|
 
 EOF
 }
@@ -24,23 +23,32 @@ echo
 
 echo
 
-read -p "Do u wanna backup your config files before installing my script? (y/n): " backup
+while true;do
+
+read -p " :: Do u wanna backup your config files before installing my script? (y/n): " backup
 
 case "$backup" in 
-	y)
+	[y]*)
 		cd ~
 		mkdir backup/
 		cp -r ~/.config/ ~/backup/
+		break
 		;;
-	n)
+	[n]*)
+		break
+		;;
+	 *)
+		echo 
+		echo
+		echo " :: Please answer yes(y) or no(n) ::"
+		echo 
+		echo
 		;;
 esac
 
-echo
+done
 
 echo
-
-echo "                                        Installation has been started "
 
 echo
 
@@ -106,88 +114,155 @@ yay=(
 
 cd ~
 
-echo
+while true;do
 
-read -p "Do u wanna install the dependencies? (y/n): " package
+read -p " :: Do u wanna install the dependencies? (y/n): " package
 
 case "$package" in
 
-	y)
-		echo "Installing dependencies"
+	[y]*)
+		echo " :: Installing dependencies ::"
 
 		sudo pacman -S "${dependencies[@]}"
+
+		break
 		;;
-	n)
+	[n]*)
+
+		break
 		;;
+
+	*)
+		echo 
+		echo
+		echo " :: Please answer yes(y) or no(n) ::"
+		echo 
+		echo
+		;;
+
 esac
 
-echo
+done
 
-read -p "Do u wanna install the yay aur helper? (y/n): " aur
-	
+while true;do
+
+echo 
+echo 
+
+read -p " :: Do u wanna install the yay aur helper? (y/n): " aur
+
 case "$aur" in
-	y)
-		echo "Installing yay ( AUR helper )"
-		
-
+	[y*])
+		echo " :: Installing yay ( AUR helper ) ::"
 		git clone https://aur.archlinux.org/yay.git 
 		cd yay/
 		makepkg -si 
 		rm -r ~/yay/
 		cd ~
+		break
 		;;
-	n)
+
+	[n]*)
+		break
 		;;
+
+	*)
+		echo 
+		echo
+		echo " :: Please answer yes(y) or no(n) ::"
+		;;
+
 esac
+
+done
+
+while true;do
 
 echo 
 
+echo
 
-read -p "Do u wanna install some aur packages? (y/n): " depen
+read -p " :: Do u wanna install some aur packages? (y/n): " depen
 
 case "$depen" in
-	y)
-		echo "Installing aur packages"
+	[y]*)
+		echo " :: Installing aur packages ::"
 
 		yay -S "${yay[@]}"
-
-		clear
+		break
 		;;
-	n)
-		clear
+
+	[n]*)
+		break
+		;;
+
+	 *)
+		echo 
+		echo
+		echo ":: Please answer yes(y) or no(n) ::"
+		;;
 esac
 
-cpu(){
-	cat << "EOF"
+done
 
-  ____  __ __  ______   ___          __  ____  __ __  _____  ____     ___   ___  
- /    ||  |  ||      | /   \        /  ]|    \|  |  ||     ||    \   /  _] /   \     Power Saving Tool
-|  o  ||  |  ||      ||     |      /  / |  o  )  |  ||   __||  D  ) /  [_ |     |	  
-|     ||  |  ||_|  |_||  O  |     /  /  |   _/|  |  ||  |_  |    / |    _]|  Q  |		
-|  _  ||  :  |  |  |  |     |    /   \_ |  |  |  :  ||   _] |    \ |   [_ |     |	   
-|  |  ||     |  |  |  |     |    \     ||  |  |     ||  |   |  .  \|     ||     |
-|__|__| \__,_|  |__|   \___/      \____||__|   \__,_||__|   |__|\_||_____| \__,_|    Just try it!
-																																					 
+while true;do
 
-EOF
-}
+echo 
 
-cpu
+echo
 
-read -p "Do u wanna install auto-cpufreq for power saving? (y/n): " cpu 
+read -p " :: Do u wanna install auto-cpufreq for power saving? (y/n): " cpu 
 
 case "$cpu" in 
-	y)
+	y*)
 
 		git clone https://github.com/AdnanHodzic/auto-cpufreq.git
 		cd auto-cpufreq &&  sudo ./auto-cpufreq-installer
 		sudo auto-cpufreq --install
-		clear
+		break
 		;;
-	n)
-		clear 
+	n*)
+		break
+		;;
+	*)
+		echo 
+		echo 
+		echo ":: Please answer yes(y) or no(n) :: "
 		;;
 esac
+
+done
+
+while true; do
+
+echo 
+echo 
+
+read -p " :: Do you wanna Install ani-cli? (y/n): " ani
+
+case "$ani" in
+
+[y]*)
+	echo 
+	echo " :: Setting Up ani-cli ::"
+
+	git clone https://github.com/pystardust/ani-cli.git
+	cp -r ani-cli/ani-cli /usr/local/bin
+	rm -rf ani-cli
+	clear
+	break 
+	;;
+[n]*)
+	clear
+	break 
+	;;
+*)
+	echo 
+	echo
+	echo ":: Please answer yes(y) or no(n) ::"
+esac
+
+done
 
 files(){
 	cat << "EOF"
@@ -206,60 +281,42 @@ EOF
 
 files
 
-read -p "Do u wanna install Dotfiles and some other files? (y/n): " dot
+while true;do
+
+echo
+
+read -p " :: Do u wanna install Dotfiles and some other files? (y/n): " dot
 
 case "$dot" in 
-y)
+[y]*)
 	cd ~/Arch-Hyprland/
 	echo
-	echo "--> Entered the Arch-Hyprland Directory"
+	echo " :: Entered the Arch-Hyprland Directory ::"
 	echo
 	cp -r starship.toml  nvim/ kitty/ hypr/ dunst/ backgrounds/ rofi/ waybar/  ~/.config/
 	cp -r .bashrc  rofi-wifi-menu/ ~
 	echo 
-	echo "--> Copied the Dotfiles successfully"
+	echo " :: Copied the Dotfiles successfully ::"
 	echo
 	sudo cp -r rofi-power-menu /usr/bin/
 	cd ~
 	clear
+	break 
 	;;
-n)
+[n]*)
 	clear
+	break 
+	;;
+*)
+	echo 
+	echo 
+	echo " :: Please answer yes(y) or no(n) ::"
+	echo
+	;;
+
 esac
 
-anime(){
-	cat << EOF
-
-					 █████╗ ███╗   ██╗██╗       ██████╗██╗     ██╗
-					██╔══██╗████╗  ██║██║      ██╔════╝██║     ██║
-					███████║██╔██╗ ██║██║█████╗██║     ██║     ██║
-					██╔══██║██║╚██╗██║██║╚════╝██║     ██║     ██║
-					██║  ██║██║ ╚████║██║      ╚██████╗███████╗██║
-					╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝       ╚═════╝╚══════╝╚═╝
-
-
-EOF
-}
-
-anime
-
-read -p "Do you wanna Install ani-cli? (y/n): " ani
-
-case "$ani" in
-
-y )
-	echo "Setting Up ani-cli"
-
-	git clone "https://github.com/pystardust/ani-cli.git"
-	cp -r ani-cli/ani-cli /usr/local/bin
-	rm -rf ani-cli
-	clear
-	;;
-n )
-	clear
-	;;
-esac
-
+done
 
 ufw(){
 	cat << "EOF"
@@ -286,50 +343,65 @@ sudo ufw default allow outgoing
 
 echo 
 
-echo "UFW rules were successfully updated in your system"
+echo " :: UFW rules were successfully updated in your system ::"
 
 sleep 1.4
 
 boot(){
 	cat << "EOF"
-																		
-
-		 ██████╗ ██████╗ ██╗   ██╗██████╗     ████████╗██╗  ██╗███████╗███╗   ███╗███████╗
-		██╔════╝ ██╔══██╗██║   ██║██╔══██╗    ╚══██╔══╝██║  ██║██╔════╝████╗ ████║██╔════╝
-		██║  ███╗██████╔╝██║   ██║██████╔╝       ██║   ███████║█████╗  ██╔████╔██║█████╗  
-		██║   ██║██╔══██╗██║   ██║██╔══██╗       ██║   ██╔══██║██╔══╝  ██║╚██╔╝██║██╔══╝  
-		╚██████╔╝██║  ██║╚██████╔╝██████╔╝       ██║   ██║  ██║███████╗██║ ╚═╝ ██║███████╗
-		 ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═════╝        ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝╚══════╝
-																																											
+	 _______  ______    __   __  _______    _______  __   __  _______  __   __  _______  _______ 
+	|       ||    _ |  |  | |  ||  _    |  |       ||  | |  ||       ||  |_|  ||       ||       |
+	|    ___||   | ||  |  | |  || |_|   |  |_     _||  |_|  ||    ___||       ||    ___||  _____|
+	|   | __ |   |_||_ |  |_|  ||       |    |   |  |       ||   |___ |       ||   |___ | |_____ 
+	|   ||  ||    __  ||       ||  _   |     |   |  |       ||    ___||       ||    ___||_____  |
+	|   |_| ||   |  | ||       || |_|   |    |   |  |   _   ||   |___ | ||_|| ||   |___  _____| |
+	|_______||___|  |_||_______||_______|    |___|  |__| |__||_______||_|   |_||_______||_______|
 
 EOF
 }
 
 clear
 boot
-read -p "Do u wanna install grub themes by ChrisTitusTech? (y/n): " chris
+
+while true;do 
+
+echo 
+
+read -p " :: Do u wanna install grub themes by ChrisTitusTech? (y/n): " chris
 
 case "$chris" in
-	y)
+	[y]*)
+		echo 
+		echo " :: Cloning Themes ::"
+		echo
 		git clone https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes.git
 		cd Top-5-Bootloader-Themes
 		sudo ./install.sh ## then select the theme u wanted u install 
 		cd ~
+		break 
 		;;
-	n)
+	[n]*)
+		break 
 		;;
+	*)
+	echo 
+	echo 
+	echo " :: Please answer yes(y) or no(n) ::"
+	echo 
+	;;
+	
 	esac
+done
 
 sddm(){
 	cat << "EOF"
-
-	███████╗██████╗ ██████╗ ███╗   ███╗    ████████╗██╗  ██╗███████╗███╗   ███╗███████╗███████╗
-	██╔════╝██╔══██╗██╔══██╗████╗ ████║    ╚══██╔══╝██║  ██║██╔════╝████╗ ████║██╔════╝██╔════╝
-	███████╗██║  ██║██║  ██║██╔████╔██║       ██║   ███████║█████╗  ██╔████╔██║█████╗  ███████╗
-	╚════██║██║  ██║██║  ██║██║╚██╔╝██║       ██║   ██╔══██║██╔══╝  ██║╚██╔╝██║██╔══╝  ╚════██║
-	███████║██████╔╝██████╔╝██║ ╚═╝ ██║       ██║   ██║  ██║███████╗██║ ╚═╝ ██║███████╗███████║
-	╚══════╝╚═════╝ ╚═════╝ ╚═╝     ╚═╝       ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝╚══════╝╚══════╝
-
+	 _______  ______   ______   __   __    _______  __   __  _______  __   __  _______  _______ 
+	|       ||      | |      | |  |_|  |  |       ||  | |  ||       ||  |_|  ||       ||       |
+	|  _____||  _    ||  _    ||       |  |_     _||  |_|  ||    ___||       ||    ___||  _____|
+	| |_____ | | |   || | |   ||       |    |   |  |       ||   |___ |       ||   |___ | |_____ 
+	|_____  || |_|   || |_|   ||       |    |   |  |       ||    ___||       ||    ___||_____  |
+	 _____| ||       ||       || ||_|| |    |   |  |   _   ||   |___ | ||_|| ||   |___  _____| |
+	|_______||______| |______| |_|   |_|    |___|  |__| |__||_______||_|   |_||_______||_______|
 
 EOF
 }
@@ -337,99 +409,123 @@ EOF
 clear
 sddm
 
-read -p "Do u wanna install sddm themes? (y/n): " lm
+while true;do
+
+echo
+
+read -p " :: Do u wanna install sddm themes? (y/n): " lm
 
 case "$lm" in
-y)
+[y]*)
+	echo 
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/keyitdev/sddm-astronaut-theme/master/setup.sh)"
-  ;;
-n)
-	echo
-	echo
-	echo "Everything is Installed perfectly just reboot your system to get perfect results"
+	echo 
+	echo 
+	echo 
+	echo " :: Everything is Installed perfectly just reboot your system to get perfect results ::"
 	echo 
 	echo
+	echo
+	break 
 	;;
+[n]*)
+	echo 
+	echo 
+	echo
+	echo " :: Everything is Installed perfectly just reboot your system to get perfect results ::"
+	echo 
+	echo 
+	echo 
+	break 
+	;;
+
+*)
+	echo 
+	echo 
+	echo " :: Please answer yes(y) or no(n) ::"
+	echo 
+	;;
+
 esac
 
-source ~/Arch-Hyprland/restore.sh
+done
 
-read -p "Do u wanna delete the directory Arch-Hyprland/ that has been cloned to your system? (y/n): " del 
+
+while true;do
+
+read -p " :: Do u wanna delete the directory Arch-Hyprland/ that has been cloned to your system? (y/n): " del 
 
 case "$del" in
-	y)
+ [y]*)
 		cd ~
 		sudo rm -r Arch-Hyprland/
 		echo 
 		echo
-		echo "Deleted the Arch-Hyprland/ directory successfully"
-		sleep 1.2
+		echo " :: Deleted the Arch-Hyprland/ directory successfully ::"
 		echo 
+		echo
+		sleep 1.2
 		clear
+		break 
 		;;
-	n)
+ [n]*)
 		clear
+		break 
 		;;
+	*)
+		echo 
+		echo 
+		echo " :: Please answer yes(y) or no(n) ::"
+		echo 
+		echo
+		;;
+	
 esac
-
-
+done
 
 reboot(){
 	cat << "EOF"
 
-				██████╗ ███████╗██████╗  ██████╗  ██████╗ ████████╗
-				██╔══██╗██╔════╝██╔══██╗██╔═══██╗██╔═══██╗╚══██╔══╝
-				██████╔╝█████╗  ██████╔╝██║   ██║██║   ██║   ██║   
-				██╔══██╗██╔══╝  ██╔══██╗██║   ██║██║   ██║   ██║   
-				██║  ██║███████╗██████╔╝╚██████╔╝╚██████╔╝   ██║   
-				╚═╝  ╚═╝╚══════╝╚═════╝  ╚═════╝  ╚═════╝    ╚═╝   
-																													 
+				 ______    _______  _______  _______  _______  _______ 
+				|    _ |  |       ||  _    ||       ||       ||       |
+				|   | ||  |    ___|| |_|   ||   _   ||   _   ||_     _|
+				|   |_||_ |   |___ |       ||  | |  ||  | |  |  |   |  
+				|    __  ||    ___||  _   | |  |_|  ||  |_|  |  |   |  
+				|   |  | ||   |___ | |_|   ||       ||       |  |   |  
+				|___|  |_||_______||_______||_______||_______|  |___|  
+
 EOF
 }
 
 reboot
 
-read -p "Do u wanna reboot ur system? (y/n): " choose
+while true;do
+
+echo
+echo
+
+read -p " :: Do u wanna reboot ur system? (y/n): " choose
 
 case "$choose" in
-	y )
-		echo "Rebooting ur system now....."
+	[y]* )
+		echo " :: Rebooting ur system now..... ::"
 		systemctl reboot
 		sleep 4
+		break 
 		;;
-	n )
+	[n]* )
 		clear
+		break 
 		;;
+	*)
+		echo 
+		echo 
+		echo " :: Please answer yes(y) or no(n) ::"
+
 esac
 
-shutdown(){
-	cat << "EOF"
+done
 
-			 ███████╗██╗  ██╗██╗   ██╗████████╗██████╗  ██████╗ ██╗    ██╗███╗   ██╗
-			 ██╔════╝██║  ██║██║   ██║╚══██╔══╝██╔══██╗██╔═══██╗██║    ██║████╗  ██║
-			 ███████╗███████║██║   ██║   ██║   ██║  ██║██║   ██║██║ █╗ ██║██╔██╗ ██║
-			 ╚════██║██╔══██║██║   ██║   ██║   ██║  ██║██║   ██║██║███╗██║██║╚██╗██║
-			 ███████║██║  ██║╚██████╔╝   ██║   ██████╔╝╚██████╔╝╚███╔███╔╝██║ ╚████║
-			 ╚══════╝╚═╝  ╚═╝ ╚═════╝    ╚═╝   ╚═════╝  ╚═════╝  ╚══╝╚══╝ ╚═╝  ╚═══╝
-																																				
-EOF
-}
-
-shutdown
-
-read -p "Do u wanna Shutdown ur system? (y/n): " select
-
-case "$select" in 
-	y )
-		echo "Shutdowing ur system now....."
-		systemctl poweroff 
-		sleep 3
-		;;
-	n )
-		clear
-		exit 0
-		;;
-esac
 
 
 
