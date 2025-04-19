@@ -2,7 +2,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/varshan4068/Arch-Hyprland?style=for-the-badge&color=3699bc) 
 ![GitHub size](https://img.shields.io/github/repo-size/varshan4068/Arch-Hyprland?style=for-the-badge&color=f38ba8)
 
-# Arch-Hyprland  
+# *Arch-Hyprland*  
                                                                                                                                                                  
   clone my repository using : 
 
@@ -28,8 +28,9 @@
   After everything is setup using nwg-look select the dracula-gtk theme 
 
  
-  Bash is configured with starship prompt
+  Bash configured with starship prompt Preview :
 
+  ![2025-04-19-235911_hyprshot](https://github.com/user-attachments/assets/2c1046bf-cce1-4c7b-845a-7f48b03205e6)
   
   You can customise the colorscheme of kitty by typing the following command on your kitty terminal
 
@@ -71,6 +72,6 @@
   These repo will be updated when changes were made in my personal configurations and in case of any bugs in my code......
 
  
- # Waybar preview
+ # *Waybar preview*
 
  ![2025-04-19-234630_hyprshot](https://github.com/user-attachments/assets/f7cb01bf-216a-40fd-a872-d12b7ff89754)
