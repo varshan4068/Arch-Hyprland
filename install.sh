@@ -306,10 +306,11 @@ case "$dot" in
 	cd ~/.config/waybar/scripts/
 	chmod +x ani-cli.sh aur.sh disk_script.sh pacman.sh timeshift.sh 
 	cd ~
-	chmod +x /usr/bin/rofi-power-menu
+	sudo chmod +x /usr/bin/rofi-power-menu
 	chmod +x ~/rofi-wifi-menu/rofi-wifi-menu.sh
 	echo " :: Chmoding the Executable files was Successfull"
 	echo 
+	sleep 3
 	clear
 	break 
 	;;
