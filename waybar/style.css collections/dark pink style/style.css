@@ -112,11 +112,11 @@ window#waybar {
 
 tooltip {
   border-radius: 2px;
-  background-color: #cdd6f4;
+  background: linear-gradient(0.28turn , #3699bc , #3cb371, #3699bc);
 }
 
 tooltip label {
-	color: #f38ba8;
+	color: #cdd6f4;
 	border-radius: 2px;
   padding: 16px;
   background-color: #000000;
