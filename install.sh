@@ -298,8 +298,18 @@ case "$dot" in
 	echo 
 	echo " :: Copied the Dotfiles successfully ::"
 	echo
-	sudo cp -r rofi-power-menu /usr/bin/
+	sudo cp rofi-power-menu /usr/bin/
+	echo 
+	echo " :: Chmoding the Executable files.. ::"
+	echo 
+	echo 
+	cd ~/.config/waybar/scripts/
+	chmod +x ani-cli.sh aur.sh disk_script.sh pacman.sh timeshift.sh 
 	cd ~
+	chmod +x /usr/bin/rofi-power-menu
+	chmod +x ~/rofi-wifi-menu/rofi-wifi-menu.sh
+	echo " :: Chmoding the Executable files was Successfull"
+	echo 
 	clear
 	break 
 	;;
@@ -528,7 +538,5 @@ case "$choose" in
 esac
 
 done
-
-
 
 
