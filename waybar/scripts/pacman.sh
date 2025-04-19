@@ -39,7 +39,8 @@ case "$delete" in
 	y)
 		cd /var/cache/
 		sudo rm -r pacman/
-		sleep 1
+		clear
+		sleep 0.4
 		;;
 	n)
 		exit 0
