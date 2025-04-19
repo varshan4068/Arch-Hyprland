@@ -14,6 +14,7 @@
     chmod +x install.sh
     ./install.sh 
 
+
  > [!WARNING]
  > This dotfiles were only tested on arch linux so try it with other distros on your own risk....
  >
@@ -68,3 +69,8 @@
 
   
   These repo will be updated when changes were made in my personal configurations and in case of any bugs in my code......
+
+ 
+ # Waybar preview
+
+ ![2025-04-19-234630_hyprshot](https://github.com/user-attachments/assets/f7cb01bf-216a-40fd-a872-d12b7ff89754)
